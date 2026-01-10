@@ -8,12 +8,12 @@
 #include <Fonts/FreeMonoBold9pt7b.h>
 
 // 屏幕对象定义：CS=5(SS), DC=17, RST=16, BUSY=4
-DisplayType display(GxEPD2_750c_Z90(/*CS=5*/ SS, /*DC=*/ 17, /*RST=*/ 16, /*BUSY=*/ 4));
+DisplayType display(GxEPD2_750c_Z90(/*CS=5*/ 5, /*DC=*/ 10, /*RST=*/ 9, /*BUSY=*/ 19));
 
 // 初始化显示器
 void initDisplay() {
   display.init(115200);      // 初始化，波特率115200
-  display.setRotation(1);    // 设置横屏显示（旋转90度）
+  display.setRotation(0);    // 设置横屏显示（旋转90度）
 }
 
 // 显示预设的三色图片数组
@@ -21,7 +21,7 @@ void drawBitmaps() {
 #if !defined(__AVR)
   // 定义要显示的图片对数组，可扩展添加更多图片
   const bitmap_pair bitmap_pairs[] = {
-    {Bitmap_example_black, Bitmap_example_red}
+    {Bitmap3c880x528_black, Bitmap3c880x528_red}
     // ,{Bitmap2_black, Bitmap2_red}  // 可继续添加
   };
 #else
