@@ -13,7 +13,7 @@ DisplayType display(GxEPD2_750c_Z90(/*CS=5*/ 5, /*DC=*/ 10, /*RST=*/ 9, /*BUSY=*
 // 初始化显示器
 void initDisplay() {
   display.init(115200);      // 初始化，波特率115200
-  display.setRotation(0);    // 设置横屏显示（旋转90度）
+  display.setRotation(2);    // 设置横屏显示（旋转90度）
 }
 
 // 显示预设的三色图片数组
